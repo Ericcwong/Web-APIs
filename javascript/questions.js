@@ -31,7 +31,7 @@ $(startQuiz).click(function(){
     var quizQuestion = $("#quizGame")
     for(let i = 0; i < questions.length; i++){
         var quiz = questions[i];
-        
+
         quizQuestion.append($(
         `<h3>${quiz.title}</h3><br>
                 <button class="" id="answer1">${quiz.choices}</button>
