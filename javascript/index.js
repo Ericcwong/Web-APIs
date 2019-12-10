@@ -11,13 +11,15 @@ after the game they have an option to view and clear the highscores  */
 
 //variables for the quiz
 var startQuiz = document.getElementById("startQuizBtn");
-
+// var quizHomeEl = docuemnt.getElementById("quizHome");
 
 //Onclick start quiz, also start the timer function then jumps to a new page
     startQuiz.addEventListener("click", addtimer);
+    //Hides the quiz home text when the button is clicked and is swapping places witht the quiz
     startQuiz.addEventListener("click",function(){
-        
-    });
+        document.getElementById("quizHome").hidden = true;
+        document.getElementById("quizStart").hidden = false;
+    }, false);
 
 
 

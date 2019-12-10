@@ -26,3 +26,6 @@ var questions = [
     }
 
 ]
+var questionTitle = document.getElementById("question");
+questionTitle.textContent = title;
+questionTitle.append(title);
