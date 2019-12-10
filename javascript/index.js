@@ -14,9 +14,11 @@ var startQuiz = document.getElementById("startQuizBtn");
 
 
 //Onclick start quiz, also start the timer function then jumps to a new page
-    startQuiz.addEventListener("click", addtimer);
-    startQuiz.addEventListener("click",function(){
-        
+    // startQuiz.addEventListener("click", addtimer);
+    $("#startQuizBtn").click(addtimer);
+    $("#startQuizBtn").click(function(){
+        $("#quiz").hide();
+        $("quizGame").show();
     });
 
 
