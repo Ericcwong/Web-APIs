@@ -29,9 +29,11 @@ $(startQuiz).click(function(){
         }
     ]
     var quizQuestion = $("#quizGame")
+    //This prints out whats inside of the array questions
     for(let i = 0; i < questions.length; i++){
+        //converts from array to variable
         var quiz = questions[i];
-
+        //adds children(quiz..) to the parent element(quizGame)
         quizQuestion.append($(
         `<h3>${quiz.title}</h3><br>
                 <button class="" id="answer1">${quiz.choices}</button>
