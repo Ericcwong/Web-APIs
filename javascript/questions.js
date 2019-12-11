@@ -1,6 +1,4 @@
 function startQuiz(){
-//Parent to append the child to
-    
     
     var questions = [
         {
@@ -30,9 +28,11 @@ function startQuiz(){
         }
     ]
     var quizQuestion = $("#quizGame")
-    quizQuestion.on("click","button",function(event){
-        debugger;
-        alert($(event.target).attr("id").split("-")[4]);
+    quizQuestion.on("click","button",function(questions){
+        var answer = questions.answer;
+        if($("#answer1").text === answer){
+            alert("this is correct");
+        }
     });
     //This prints out whats inside of the array questions
     for(let i = 0; i < questions.length; i++){
@@ -48,11 +48,9 @@ function startQuiz(){
                 
             `))
         
-        // $("#answer1, #answer2, #answer3, #answer4," + i).click(function(){
-            
-        //     alert(i);
-                    
-        // });
+            function answerChecker(){
+
+            }
     }
 
 }

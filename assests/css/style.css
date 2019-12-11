@@ -1,6 +1,6 @@
 /*Media Queries*/
 @media only screen and (max-width: 200px){
-    button{
+    #answer1, #answer2, #answer3, #answer4{
         width: 20%;
         height: 2%;
     }
@@ -12,22 +12,26 @@
         font-size: 1rem;
     }
 }
-@media only screen and (max-width: 600px){
-    h3{
-        font-size: 1rem;
+@media only screen and (max-width: 990px){
+    #answer1, #answer2, #answer3, #answer4{
+        width: 45%;
+        height: 10%;
     }
 }
-@media only screen and (max-width: 1024px){
-    h3{
-        font-size: 10rem;
+@media only screen and (max-width: 1400px){
+    #answer1, #answer2, #answer3, #answer4{
+        width: 45%;
+        height: 10%;
     }
 }
-@media only screen and (max-width: 600px){
-
+@media only screen and (min-width: 1401px){
+    #answer1, #answer2, #answer3, #answer4{
+        float: left;
+        width: 50%;
+        height: 10%;
+    }
 }
-@media only screen and (max-width: 600px){
 
-}
 #quiz h3{
     color:black;
 }

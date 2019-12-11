@@ -41,6 +41,7 @@ function addtimer(){
         
         if(startTime === 0){
             clearInterval(timerInterval)
+            alert("Game Over ")
         }
             }, 1000);
 }
