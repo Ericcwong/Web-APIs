@@ -10,8 +10,6 @@ after the game they have an option to view and clear the highscores  */
 //Will need buttons for starting the quiz and buttons for when the user has made their selection.
 
 //variables for the quiz
-var startQuiz = document.getElementById("startQuizBtn");
-// var quizHomeEl = docuemnt.getElementById("quizHome");
 
 //Onclick start quiz, also start the timer function then jumps to a new page
     // startQuiz.addEventListener("click", addtimer);
@@ -19,6 +17,7 @@ var startQuiz = document.getElementById("startQuizBtn");
     $("#startQuizBtn").click(function(){
         $("#quiz").hide();
         $("quizGame").show();
+        startQuiz();
     });
 
 

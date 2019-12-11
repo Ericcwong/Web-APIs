@@ -1,6 +1,7 @@
-$(startQuiz).click(function(){
+function startQuiz(){
+//Parent to append the child to
+    var quizQuestion = $("#quizGame")
     
-
     var questions = [
         {
             title: "Who is not part of the Avengers?",
@@ -28,25 +29,27 @@ $(startQuiz).click(function(){
             answer:"$30,000"
         }
     ]
-    var quizQuestion = $("#quizGame")
-
-
+    
     //This prints out whats inside of the array questions
-    for(let i = 0; i < questions.length; i++){
+    for(var i = 0; i < questions.length; i++){
         //converts from array to variable
         var quiz = questions[i];
         //adds children(quiz..) to the parent element(quizGame)
         quizQuestion.append($(
-        `<h3>${quiz.title}</h3><br>
-                <button class="" id="answer1">${quiz.choices}</button>
-                <button class="" id="answer2">${quiz.choices}</button>
-                <button class="" id="answer3">${quiz.choices}</button>
-                <button class="" id="answer4">${quiz.choices}</button>
-            
-    `))
-        $("#answer1").click(function(){
-            alert("hi");
+            `<h3>${quiz.title}</h3><br>
+                <button class="" id="answer1">${quiz.choices[0]}</button>
+                <button class="" id="answer2">${quiz.choices[1]}</button>
+                <button class="" id="answer3">${quiz.choices[2]}</button>
+                <button class="" id="answer4">${quiz.choices[3]}</button>
+            `))
+        
+        $("#answer1, #answer2, #answer3, #answer4").click(function(){
+            var rightAnswer = questions.answer;
+            var multipleChoices = $("#answer1","#answer2","#answer3","#answer4")
+            if(multipleChoices === rightAnswer){
+                alert("You are right");
+                    }
         });
     }
 
-});
+}
