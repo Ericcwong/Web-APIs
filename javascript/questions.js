@@ -1,6 +1,6 @@
 function startQuiz(){
 //Parent to append the child to
-    var quizQuestion = $("#quizGame")
+    
     
     var questions = [
         {
@@ -29,9 +29,13 @@ function startQuiz(){
             answer:"$30,000"
         }
     ]
-    
+    var quizQuestion = $("#quizGame")
+    quizQuestion.on("click","button",function(event){
+        debugger;
+        alert($(event.target).attr("id").split("-")[4]);
+    });
     //This prints out whats inside of the array questions
-    for(var i = 0; i < questions.length; i++){
+    for(let i = 0; i < questions.length; i++){
         //converts from array to variable
         var quiz = questions[i];
         //adds children(quiz..) to the parent element(quizGame)
@@ -41,15 +45,14 @@ function startQuiz(){
                 <button class="" id="answer2">${quiz.choices[1]}</button>
                 <button class="" id="answer3">${quiz.choices[2]}</button>
                 <button class="" id="answer4">${quiz.choices[3]}</button>
+                
             `))
         
-        $("#answer1, #answer2, #answer3, #answer4").click(function(){
-            var rightAnswer = questions.answer;
-            var multipleChoices = $("#answer1","#answer2","#answer3","#answer4")
-            if(multipleChoices === rightAnswer){
-                alert("You are right");
-                    }
-        });
+        // $("#answer1, #answer2, #answer3, #answer4," + i).click(function(){
+            
+        //     alert(i);
+                    
+        // });
     }
 
 }
