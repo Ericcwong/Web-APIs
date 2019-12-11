@@ -29,6 +29,8 @@ $(startQuiz).click(function(){
         }
     ]
     var quizQuestion = $("#quizGame")
+
+
     //This prints out whats inside of the array questions
     for(let i = 0; i < questions.length; i++){
         //converts from array to variable
@@ -42,7 +44,9 @@ $(startQuiz).click(function(){
                 <button class="" id="answer4">${quiz.choices}</button>
             
     `))
-
+        $("#answer1").click(function(){
+            alert("hi");
+        });
     }
 
 });
