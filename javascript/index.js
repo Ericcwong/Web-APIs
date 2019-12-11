@@ -18,6 +18,7 @@ after the game they have an option to view and clear the highscores  */
         $("#quiz").hide();
         $("quizGame").show();
         startQuiz();
+        addtimer();
     });
 
 
@@ -32,6 +33,7 @@ var startTime = 76;
 
 function addtimer(){
     //This is to add element h4
+    
     displayTime = document.createElement("h4");
         //This is the actual number count down
         var timerInterval = setInterval(function(){
