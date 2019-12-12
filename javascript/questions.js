@@ -1,5 +1,3 @@
-function startQuiz(){
-    
     var questions = [
         {
             title: "Who is not part of the Avengers?",
@@ -27,30 +25,26 @@ function startQuiz(){
             answer:"$30,000"
         }
     ]
-    var quizQuestion = $("#quizGame")
-    quizQuestion.on("click","button",function(questions){
-        var answer = questions.answer;
-        if($("#answer1").text === answer){
-            alert("this is correct");
-        }
-    });
-    //This prints out whats inside of the array questions
-    for(let i = 0; i < questions.length; i++){
-        //converts from array to variable
-        var quiz = questions[i];
-        //adds children(quiz..) to the parent element(quizGame)
-        quizQuestion.append($(
-            `<h3>${quiz.title}</h3><br>
-                <button class="" id="answer1">${quiz.choices[0]}</button>
-                <button class="" id="answer2">${quiz.choices[1]}</button>
-                <button class="" id="answer3">${quiz.choices[2]}</button>
-                <button class="" id="answer4">${quiz.choices[3]}</button>
-                
-            `))
-        
-            function answerChecker(){
-
-            }
+    i=0;
+    var quizQuestion = document.getElementById("title");
+    
+   function displayQuestion(){
+       if(i >= questions.length){
+           displayEndGame();
+       }else{
+    quizQuestion.textContent = questions[i].title;
+    i++;
     }
+   }
+   document.getElementById("rows").addEventListener("click",function(){
+    displayQuestion();
+   });
+    var choices = questions[i].choices;
+    var correctAnswer = questions[i].answer
 
-}
+    function displayEndGame(){
+        document.getElementById("quizGame").hidden = true;
+        
+        // document.createElement(`h1`);
+        // h1.innerText = "hello";
+    }

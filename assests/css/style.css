@@ -3,31 +3,31 @@
     #quizGame h3{
         font-size: 2rem;
     }
-    #answer1, #answer2, #answer3, #answer4{
+    #answer0, #answer1, #answer2, #answer3{
         float:left;
         font-size: 1.1rem!important;
     }
-    #answer1, #answer3{
+    #answer0, #answer1{
         margin-left: 4%;
     }
 }
 
 @media only screen and (max-width: 990px){
-    #answer1, #answer2, #answer3, #answer4{
+    #answer0, #answer1, #answer2, #answer3{
         width: 45%;
         height: 10%;
         font-size: larger;
     }
 }
 @media only screen and (max-width: 1400px){
-    #answer1, #answer2, #answer3, #answer4{
+    #answer0, #answer1, #answer2, #answer3{
         width: 45%;
         height: 10%;
         font-size: x-large;
     }
 }
 @media only screen and (min-width: 1401px){
-    #answer1, #answer2, #answer3, #answer4{
+    #answer0, #answer1, #answer2, #answer3{
         float: left;
         width: 50%;
         height: 10%;
@@ -45,7 +45,7 @@
 
 
 /*Quiz Buttons*/
-#answer1, #answer2, #answer3, #answer4{
+#answer0, #answer1, #answer2, #answer3{
     background: blue;
     color: white;
 

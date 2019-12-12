@@ -9,17 +9,20 @@ after the game they have an option to view and clear the highscores  */
 /*The center of the page is where the quiz will sit. Need a way to pull questions from questions.js*/
 //Will need buttons for starting the quiz and buttons for when the user has made their selection.
 
-//variables for the quiz
+
 
 //Onclick start quiz, also start the timer function then jumps to a new page
     // startQuiz.addEventListener("click", addtimer);
-    $("#startQuizBtn").click(addtimer);
-    $("#startQuizBtn").click(function(){
-        $("#quiz").hide();
-        $("quizGame").show();
-        startQuiz();
+    // $("#startQuizBtn").click(addtimer);
+    document.getElementById("startQuizBtn").addEventListener("click",function(){
+        document.getElementById("quiz").hidden = true;
+        document.getElementById("quizGame").hidden = false;
+        displayQuestion();
         addtimer();
-    });
+    }, false);
+        
+        
+
 
 
 
@@ -28,10 +31,11 @@ after the game they have an option to view and clear the highscores  */
 (This would be inside the onclick quiz function)*/
 
 //variables for the timer
-var baseTimer = document.getElementById("timer");
-var startTime = 76;
+
 
 function addtimer(){
+    var baseTimer = document.getElementById("timer");
+    var startTime = 76;
     //This is to add element h4
     
     displayTime = document.createElement("h4");
