@@ -27,24 +27,68 @@
     ]
     i=0;
     var quizQuestion = document.getElementById("title");
-    
+    var answer0 = document.getElementById("answer0")
+    var answer1 = document.getElementById("answer1")
+    var answer2 = document.getElementById("answer2")
+    var answer3 = document.getElementById("answer3")
+
    function displayQuestion(){
        if(i >= questions.length){
-           displayEndGame();
-       }else{
-    quizQuestion.textContent = questions[i].title;
-    i++;
-    }
-   }
-   document.getElementById("rows").addEventListener("click",function(){
-    displayQuestion();
-   });
+       
+       }
     var choices = questions[i].choices;
-    var correctAnswer = questions[i].answer
-
-    function displayEndGame(){
-        document.getElementById("quizGame").hidden = true;
-        
-        // document.createElement(`h1`);
-        // h1.innerText = "hello";
+    for(var c = 0; c < choices.length; c++){
+        document.getElementById("answer" + c).textContent = choices[c];
+        // debugger;
     }
+     quizQuestion.textContent = questions[i].title;
+    
+
+    }
+    
+
+   document.getElementById("rows").addEventListener("click",function(){
+    answerChecker();   
+    displayQuestion();
+    
+   });
+
+    // function displayEndGame(){
+    //     document.getElementById("quizGame").hidden = true;
+    //     clearInterval(timerInterval)
+    //     // document.createElement(`h1`);
+    //     // h1.innerText = "hello";
+    // }
+
+
+var correctAnswer = questions[i].answer;
+function answerChecker(){
+    correctAnswer === true;
+    if(answer0.textContent === correctAnswer){
+        alert("You are correct");
+        return i++;
+        }else{
+            correctAnswer === false;
+            alert("You are wrong");
+
+        }
+    if(answer1.textContent === correctAnswer){
+        alert("You are correct");
+         return i++;
+    }else{
+        alert("You are wrong");
+    }
+    if(answer2.textContent === correctAnswer){
+        alert("You are correct");
+        return i++;
+    }else{
+        alert("You are wrong");
+    }
+    if(answer3.textContent === correctAnswer){
+        alert("You are correct");
+        return i++;
+    }else{
+        alert("You are wrong");
+    }
+    debugger;
+}
