@@ -20,12 +20,36 @@ after the game they have an option to view and clear the highscores  */
         displayQuestion();
         addtimer();
     }, false);
-        
-        
 
+    i=0;
+    var quizQuestion = document.querySelector(".title");
+    var answer0 = document.querySelector("#answer0");
+    var answer1 = document.querySelector("#answer1");
+    var answer2 = document.querySelector("#answer2");
+    var answer3 = document.querySelector("#answer3");
+    var answers = false; 
+   function displayQuestion(){
+       if(i >= questions.length){
+       
+       }
+    var choices = questions[i].choices;
+    for(var c = 0; c < choices.length; c++){
+        document.getElementById("answer" + c).textContent = choices[c];
+        // debugger;
+    }
+     quizQuestion.textContent = questions[i].title;
+    }
+    var correctAnswer = questions[i].answer;
+    function answerChecker(){
+        if(document.querySelectorAll("button").innerHTML !== correctAnswer){
+            alert("wrong");
+        }else {alert("right");}
+    }
 
-
-
+   document.getElementById("buttons").addEventListener("click",function(){  
+    displayQuestion();
+    answerChecker();
+   });
 
 /*top right corner has a timer that starts when user hits the start quiz button 
 (This would be inside the onclick quiz function)*/
