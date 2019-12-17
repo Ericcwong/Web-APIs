@@ -1,52 +1,33 @@
-/*Media Queries*/
-@media only screen and (max-width: 550px){
-    #quizGame h3{
-        font-size: 2rem;
-    }
-    #answer0, #answer1, #answer2, #answer3{
-        float:left;
-        font-size: 1.1rem!important;
-    }
-    #answer0, #answer1{
-        margin-left: 4%;
-    }
+*, *::before, *::after{
+    box-sizing: border-box;
 }
-
-@media only screen and (max-width: 990px){
-    #answer0, #answer1, #answer2, #answer3{
-        width: 45%;
-        height: 10%;
-        font-size: larger;
-    }
+.container{
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: lightcoral;
+    font-family: 'Times New Roman', Times, serif;
 }
-@media only screen and (max-width: 1400px){
-    #answer0, #answer1, #answer2, #answer3{
-        width: 45%;
-        height: 10%;
-        font-size: x-large;
-    }
+.quizHome{
+   text-align: center;
 }
-@media only screen and (min-width: 1401px){
-    #answer0, #answer1, #answer2, #answer3{
-        float: left;
-        width: 50%;
-        height: 10%;
-        font-size: 2rem;
-    }
-    #quizGame h3{
-        font-size: 3rem;
-    }
+.quizHome h3{
+    font-size: 2rem;
+    text-align: center;
 }
-
-#quiz h3{
+#startQuizBtn{
+    font-size: 1.25rem;
+    font-family: 'Times New Roman', Times, serif;
     color:black;
+    background-color: white;
+    padding: 1rem;
 }
 
 
 
-/*Quiz Buttons*/
-#answer0, #answer1, #answer2, #answer3{
-    background: blue;
-    color: white;
 
-}
+
+
