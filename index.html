@@ -16,6 +16,7 @@
 <body>
 
   <div class="container">
+    
     <div class="quizHome" id="quiz">
       <h3>Welcome to the all intense not so intense quiz. <br>
         Five questions, each with four answers but only one right. <br>
@@ -23,11 +24,17 @@
       <button class="startQuiz" id="startQuizBtn">Click Here to start the quiz!</button>
     </div>
     <div class="quizGame" id="quizGame" >
+      <div id="scoreBoard"></div>
+      <div id="timer"></div>
       <div id="questions"></div>
       <div id="answerButtons"></div>
       <div class="rightOrWrong"></div>
     </div>
+    <div class="gameOver">
+    </div>
   </div>
+
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
