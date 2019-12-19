@@ -36,18 +36,22 @@ function displayQuestion() {
   var currentQuestion = quiz.questions[quiz.questionCounter];
   $("#scoreBoard").html(`<h2>Score: ${score}</h2>`);
   $("#answerButtons").empty();
-  $("#questions").html(`<h3>${currentQuestion.title}</h3>`);
-
-  for (var i = 0; i < currentQuestion.choices.length; i++) {
-    $("#answerButtons").append(`
-            <button id="answer-${i + 1}" class="answerButton" value=${
-      currentQuestion.choices[i]
-    }>
-            ${currentQuestion.choices[i]}
-            </button>   
-        `);
+  if (quiz.questionCounter === 5) {
+    gameOver();
+  } else {
+    $("#questions").html(`<h3>${currentQuestion.title}</h3>`);
+    for (var i = 0; i < currentQuestion.choices.length; i++) {
+      $("#answerButtons").append(`
+              <button id="answer-${i + 1}" class="answerButton" value=${
+        currentQuestion.choices[i]
+      }>
+              ${currentQuestion.choices[i]}
+              </button>   
+          `);
+    }
   }
 }
+
 $(document).on("click", ".answerButton", function() {
   console.log("click", ".answerButton");
   var currentQuestion = quiz.questions[quiz.questionCounter];
@@ -60,17 +64,33 @@ $(document).on("click", ".answerButton", function() {
     displayQuestion();
   } else {
     $(".rightOrWrong").html("You are Wrong");
-    startTime-15;
+    startTime = startTime - 15;
   }
 });
 
-function gameOver(){
-    $("#quizGame").hide();
-     $(".gameOver").show();
-    $(".gameOver").append(`
-    <h2>Game Over</h2>
-    <h2>${score}</h2>
-    <button onClick="window.location.reload();">Start Again!</button>
-`)
-     
+function gameOver() {
+  $("#quizGame").hide();
+  $(".gameOver").show();
+  $(".gameOverTitle").html(`<h1>Game Over!</h1>`);
+  $(".score").html(`Time Remaining : ${startTime}`);
+  $(".initialText").append(`<h3>Please enter your initials</h3>`);
+  $(".initialInput").append(`<input id="initials"></input>`);
+  $(".gameOverBtn").append(`
+  <button type="submit" class="btn btn-primary">Save Score</button>
+  <button onClick="window.location.reload();" class="btn btn-primary">Start Again!</button>
+  `);
 }
+$("#highScores").on("click", function(event) {
+  event.preventDefault();
+  $(".main").hide();
+  $(".quizHome").hide();
+  $("#quizGame").hide();
+  $(".highScore").append(`
+  <button onClick="window.location.reload();" class="btn btn-primary">Go Back</button>
+
+<h2>Items</h2>
+<ul></ul>
+
+<button>Clear All</button>
+  `);
+});

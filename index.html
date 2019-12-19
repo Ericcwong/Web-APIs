@@ -1,55 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Web APIs</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="assests/css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <title>Web APIs</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="assests/css/style.css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="highScore">
+          <button id="highScores" class="btn btn-primary">HighScores</button>
+        </div>
+      </header>
+      <div class="quizHome" id="quiz">
+        <h3>
+          Welcome to the all intense not so intense quiz. <br />
+          Five questions, each with four answers but only one right. <br />
+          Can you guess them all right? Good luck.
+        </h3>
+        <br />
+        <button class="startQuiz" id="startQuizBtn">
+          Click Here to start the quiz!
+        </button>
+      </div>
 
-<body>
-
-  <div class="container">
-    
-    <div class="quizHome" id="quiz">
-      <h3>Welcome to the all intense not so intense quiz. <br>
-        Five questions, each with four answers but only one right. <br>
-        Can you guess them all right? Good luck.</h3><br>
-      <button class="startQuiz" id="startQuizBtn">Click Here to start the quiz!</button>
+      <div class="main">
+        <div class="quizGame" id="quizGame">
+          <div id="scoreBoard"></div>
+          <div id="timer"></div>
+          <div id="questions"></div>
+          <div id="answerButtons"></div>
+          <div class="rightOrWrong"></div>
+        </div>
+        <div class="gameOver">
+          <div class="gameOverTitle"></div>
+          <div class="initialText"></div>
+          <div class="initialInput"></div>
+          <div class="score"></div>
+          <div class="gameOverBtn"></div>
+        </div>
+      </div>
     </div>
-    <div class="quizGame" id="quizGame" >
-      <div id="scoreBoard"></div>
-      <div id="timer"></div>
-      <div id="questions"></div>
-      <div id="answerButtons"></div>
-      <div class="rightOrWrong"></div>
-    </div>
-    <div class="gameOver">
-    </div>
-  </div>
 
-  
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
-  <script src="javascript/questions.js"></script>
-  <script src="javascript/index.js"></script>
-
-
-</body>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/questions.js"></script>
+    <script src="javascript/index.js"></script>
+  </body>
 </html>

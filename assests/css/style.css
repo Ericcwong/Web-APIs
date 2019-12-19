@@ -11,11 +11,12 @@
     background-color: lightcoral;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .quizHome{
    text-align: center;
 }
 .quizHome h3{
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 }
 #startQuizBtn{
@@ -24,6 +25,7 @@
     color:black;
     background-color: white;
     padding: 1rem;
+    border: none;
 }
 #scoreBoard{
     /* position: absolute; */
@@ -37,16 +39,24 @@
     bottom: 90%;
     /* justify-content: left; */
 }
-/* .gameOver{
-    margin:0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: lightcoral;
-    font-family: 'Times New Roman', Times, serif;
-} */
-
-
-
+header{
+    position: fixed;
+    top: 0;
+    left: 15%;
+    
+} 
+.main{
+    background-color: white;
+    padding: 5%;
+}
+#highScore{
+    font-size: 1.5rem;
+}
+.answerButton{
+    background-color: lightblue;
+    font-size: 1.5rem;
+}
+.rightOrWrong{
+    font-size: 2rem;
+    text-align: center;
+}
