@@ -76,21 +76,35 @@ function gameOver() {
   $(".initialText").append(`<h3>Please enter your initials</h3>`);
   $(".initialInput").append(`<input id="initials"></input>`);
   $(".gameOverBtn").append(`
-  <button type="submit" class="btn btn-primary">Save Score</button>
+  <button value="save" id="save" class="btn btn-primary"> Save Score </button>
   <button onClick="window.location.reload();" class="btn btn-primary">Start Again!</button>
   `);
 }
+$(document).on("click", "#save", function(event){
+  event.preventDefault();
+  console.log("click");
+  console.log(initials);
+  console.log(startTime);
+  var scores = startTime;
+  localStorage.setItem("initial",$("#initials").val());
+  localStorage.setItem("scores",$("startTime").val());
+  $("#initials").val("");
+  $("startTime").val("");
+});
+
 $("#highScores").on("click", function(event) {
   event.preventDefault();
   $(".main").hide();
   $(".quizHome").hide();
   $("#quizGame").hide();
+  var score = startTime;
+  var initial = localStorage.getItem("initial");
+  var score = localStorage.getItem("scores")
   $(".highScore").append(`
   <button onClick="window.location.reload();" class="btn btn-primary">Go Back</button>
-
-<h2>Items</h2>
-<ul></ul>
-
-<button>Clear All</button>
+  <h2>Player Scores:</h2>
+  <ul>${initial},${startTime}</ul>
+  <button>Clear All</button>
   `);
 });
+{/* <button type="submit" id="save" class="btn btn-primary">Save Score</button> */}

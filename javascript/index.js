@@ -20,6 +20,7 @@ $(".quizHome").show();
 /*top right corner has a timer that starts when user hits the start quiz button 
 (This would be inside the onclick quiz function)*/
 var startTime = 75;
+
 function addtimer(){
     var baseTimer = document.getElementById("scoreBoard");
     
